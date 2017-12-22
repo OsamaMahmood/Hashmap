@@ -14,28 +14,55 @@ import java.util.*;
 public class NewClass {
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) throws InterruptedException{
-		HashMap testmap;
-                        testmap = new HashMap<>();
-                        Iterator entries = testmap.entrySet().iterator();
+        
+                //Creating a Non-Generic HashMap
+		HashMap testmap = new HashMap<>();
                         boolean loopAgain = true;
                  Scanner scan = new Scanner(System.in);
+                 
+                 // loop while user not entering no
+                 
                  do{
-			System.out.print("Enter ID number:");
+			System.out.print("Enter Value:");
+                        
+                        // ask for user input for Value
+                        
 			int value = scan.nextInt();
                         float key;
                         int d=11;
+                        
+                        //Generating Key from the enter Value
+                        
                         key = value%d;
+                        
+                        //Linear probing Function
+                        
                         while (!(testmap.get(key)==null))
                         {
                             key = key+1;
                         }
+                        
+                        //Setting Values in the HashMap
+                        
                         testmap.put(key,value);
+                        
+                        //Displaying Key after Insertion
+                        
                         System.out.println("Your Key Is "+ key);
+                        
+                        //Insert an other key value in the HashMap
+                        
                         System.out.println("Enter another record (y/n)?");
 			String answer = scan.next();
+                        
+                        // condition to satisfy in order to loop again
+                        
 			if (answer.equals("y") || answer.equals("Y")) {
 				continue;
 			} else{
+                            
+                            //Function to find the value from HashMap for given key
+                            
                             float a;
                             System.out.println("Enter the Key: ");
                             a = scan.nextFloat();
@@ -47,6 +74,8 @@ public class NewClass {
                         }
                         
                  }while (loopAgain);   
+                 
+                 //Display All Key Value Pairs in the HashMap
                  
                  System.out.println("All Value In HashMap");
                  for (Object key : testmap.keySet()) {
