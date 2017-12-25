@@ -11,12 +11,12 @@ import java.util.*;
  *
  * @author m4rkm3n
  */
-public class NewClass {
+public class HashMapInt {
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) throws InterruptedException{
         
                 //Creating a Non-Generic HashMap
-		HashMap testmap = new HashMap<>();
+		HashMap IntHashMap = new HashMap<>();
                         boolean loopAgain = true;
                  Scanner scan = new Scanner(System.in);
                  
@@ -37,14 +37,14 @@ public class NewClass {
                         
                         //Linear probing Function
                         
-                        while (!(testmap.get(key)==null))
+                        while (!(IntHashMap.get(key)==null))
                         {
                             key = key+1;
                         }
                         
                         //Setting Values in the HashMap
                         
-                        testmap.put(key,value);
+                        IntHashMap.put(key,value);
                         
                         //Displaying Key after Insertion
                         
@@ -67,7 +67,7 @@ public class NewClass {
                             System.out.println("Enter the Key: ");
                             a = scan.nextFloat();
                             
-                            int result =  Integer.parseInt(testmap.get(a).toString());
+                            int result =  Integer.parseInt(IntHashMap.get(a).toString());
                             System.out.println("Key"+"      "+"Value");
                             System.out.println(a+"     "+result);
                             break;
@@ -78,8 +78,8 @@ public class NewClass {
                  //Display All Key Value Pairs in the HashMap
                  
                  System.out.println("All Value In HashMap");
-                 for (Object key : testmap.keySet()) {
-                     Object value = testmap.get(key);
+                 for (Object key : IntHashMap.keySet()) {
+                     Object value = IntHashMap.get(key);
                      System.out.println("Key = " + key + ", Value = " + value);
                     }
     }
