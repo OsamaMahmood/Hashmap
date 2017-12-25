@@ -32,7 +32,7 @@ public class HashMapString {
                         float key;
                         int d=11;
                        
-                        
+                        //Converts the string value to ASCII
                         
                        for (int i=0; i<value.length();i++){
                            ascii = ascii+(int)value.charAt(i);
