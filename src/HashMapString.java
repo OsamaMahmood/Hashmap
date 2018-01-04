@@ -29,7 +29,7 @@ public class HashMapString {
                         
 			String value = scan.next();
                         int ascii = 0;
-                        float key;
+                        int key;
                         int d=11;
                        
                         //Converts the string value to ASCII Format
@@ -69,14 +69,15 @@ public class HashMapString {
 				continue;
 			} else{
                             
+                           
                             //Function to find the value from HashMap for given key
                             System.out.println("");
                             System.out.println("");
                             System.out.println("");
                             System.out.println("");
-                            float a;
+                            int a;
                             System.out.println("Enter the Key: ");
-                            a = scan.nextFloat();
+                            a = scan.nextInt();
                             System.out.println("");
                             System.out.println("");
                 
@@ -84,6 +85,7 @@ public class HashMapString {
                             System.out.println("Key"+"      "+"Value");
                             System.out.println(a+"     "+result);
                             break;
+                            
                         }
                         
                  }while (loopAgain);   
