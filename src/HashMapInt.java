@@ -28,7 +28,7 @@ public class HashMapInt {
                         // ask for user input for Value
                         
 			int value = scan.nextInt();
-                        float key;
+                        int key;
                         int d=11;
                         
                         //Generating Key from the enter Value
@@ -60,17 +60,37 @@ public class HashMapInt {
 			if (answer.equals("y") || answer.equals("Y")) {
 				continue;
 			} else{
-                            
+                           
+                            System.out.println("1 = Find Value By Key");
+                            System.out.println("2 = Find Key By Value");
+
+                            if(scan.nextInt()==1){
                             //Function to find the value from HashMap for given key
                             
-                            float a;
+                            int a;
                             System.out.println("Enter the Key: ");
-                            a = scan.nextFloat();
-                            
+                            a = scan.nextInt();
                             int result =  Integer.parseInt(IntHashMap.get(a).toString());
                             System.out.println("Key"+"      "+"Value");
                             System.out.println(a+"     "+result);
                             break;
+                            }
+                            else{
+                                int a;
+                                System.out.println("Enter the Value: ");
+                                a = scan.nextInt();
+                                int key1 = a%d;
+                                
+                                while (!(Integer.parseInt(IntHashMap.get(key1).toString())==a))
+                                 {
+                                     key1 = key1+1;
+                                 }
+                                
+                                int result =  key1;
+                                 System.out.println("Value"+"      "+"Key");
+                                 System.out.println(a+"          "+result);
+                            break;
+                            }
                         }
                         
                  }while (loopAgain);   
